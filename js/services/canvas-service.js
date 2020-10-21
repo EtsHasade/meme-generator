@@ -19,16 +19,19 @@ function renderBGImageToCanvas(imgId) {
     gCanvas.height = elImg.height;
     gCtx.drawImage(elImg, 0, 0);
 
+    
 }
 
 function drawLines() {
-    const meme = getMeme();
+    const meme = getCurrMeme();
     console.log("drawLines -> meme", meme)
     meme.lines.forEach(line => drawLine(line));    
 }
 
 function drawLine(line) {
+    if (line.selected) markSelectLine(line);
     drawText(line.txt, line.x, line.y, line.size, line.font, line.align, line.srokeColor, line.fillColor);
+    
 }
 
 

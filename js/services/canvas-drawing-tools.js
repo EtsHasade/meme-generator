@@ -56,6 +56,13 @@ function drowBrash(ev) {
 }
 
 
+function markSelectLine(line) {
+    gCtx.save()
+    gCtx.fillStyle = '#bebebe70';
+    drawRect(line.x-line.txt.length*line.size/2, line.y-line.size, line.txt.length*line.size, line.size+5)
+    gCtx.restore()
+}
+
 function drawLine(x, y, xEnd, yEnd) {
     gCtx.beginPath()
     gCtx.moveTo(x, y)

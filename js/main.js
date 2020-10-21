@@ -27,21 +27,54 @@ function renderGallery() {
 function onSelectImg(eLimg) {
     setCurrImg(eLimg.dataset.id);
     renderCanvas()
+    setDefulteLinesLoc()
+    renderCanvas()
+    
 }
 
 
-function onChangeLineText(text) { 
+function onChangeLineText(text) {
     getCurrLine().txt = text;
     renderCanvas();
 }
 
 
-function onSetCurrLine(numIdx) { 
-    setCurrLine(numIdx-1)
+function onSwithLines() {
+    console.log('press swith');
+    selectNextLine();
+    renderCanvas()
     document.querySelector('#line-text').value = getCurrLine().txt;
-    console.log("onSetCurrLine -> getCurrLine.txt", getCurrLine.txt)
+    console.log("onSetCurrLine -> getCurrLine.txt", getCurrLine().txt)
 }
 
+
+function onSetCurrLine(numIdx) {
+    setCurrLine(numIdx - 1)
+    document.querySelector('#line-text').value = getCurrLine().txt;
+    console.log("onSetCurrLine -> getCurrLine.txt", getCurrLine().txt)
+}
+
+
+function onIncreaseLine() {
+    getCurrLine().size++;
+    renderCanvas()
+}
+
+
+function onDecreaseLine() {
+    getCurrLine().size--;
+    renderCanvas()
+}
+
+
+function onLineUp() {
+    getCurrLine().y -= 5;
+    renderCanvas();
+}
+function onLineDown() {
+    getCurrLine().y += 5;
+    renderCanvas();
+}
 function getElImgById(imgId) {
     const elImg = document.querySelector(`.gallery-img.img${imgId}`);
     console.log("onGetImgById -> elImg", elImg)

@@ -8,18 +8,19 @@ body {
 
 button {
     cursor: pointer;
-    padding: 0.5em
+    padding: 0.5em;
+    user-select: none;
 }
 
 input {
     padding: 0.5em;
-    margin-bottom: 1em;
+    margin-bottom: 1em  ;
 }
 
 
 
 .grud-gallery {
-    background-color: #02a;
+    background-color: #bebebe70;
     display: grid;
     
 }

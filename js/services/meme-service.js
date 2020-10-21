@@ -13,21 +13,23 @@ var gMeme = {
             txt: 'I never eat Falafel',
             size: 20,
             font: 'IMPACT',
-            align: 'left',
+            align: 'center',
             srokeColor: '#000000',
             fillColor: '#ffffff',
-            x: 50,
+            x: 250,
             y: 50,
+            selected: false
         },
         {
             txt: 'goodBy momo',
             size: 20,
             font: 'IMPACT',
-            align: 'left',
+            align: 'center',
             srokeColor: '#000000',
             fillColor: '#ffffff',
             x: 50,
             y: 200,
+            selected: false
         }
     ]
 }
@@ -36,11 +38,27 @@ var gCurrLine = null;
 
 function setCurrLine(lineIdx) {
     gCurrLine = getLineByIdx(lineIdx)
+    getCurrMeme().lines.forEach(line => {
+        if (line === gCurrLine) line.selected = true;
+        else line.selected = false;
+    })
+
 }
 
 function getCurrLine() {
     return gCurrLine;
 }
+
+function selectNextLine() {
+    const memeLines = getCurrMeme().lines;
+    const currLine = getCurrLine()
+    const currLineIdx = memeLines.findIndex(line => line === currLine);
+    const selectLineIdx = (memeLines[currLineIdx + 1]) ? currLineIdx + 1 : 0;
+    setCurrLine(selectLineIdx);
+}
+
+
+
 
 var gCurrImgId = 1;
 
@@ -65,6 +83,15 @@ function getLineByIdx(lineIdx) {
     return gMeme.lines[lineIdx]
 }
 
-function getMeme() {
+function getCurrMeme() {
     return gMeme;
+}
+
+
+function setDefulteLinesLoc() {
+    getCurrMeme().lines.forEach((line,idx) => {
+        line.x = gCanvas.width / 2;
+        if (idx % 2 === 0) line.y = gCanvas.height - gCanvas.height / 10;
+        else line.y = gCanvas.height / 10;
+    })
 }
