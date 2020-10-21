@@ -5,55 +5,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>memegen</title>
-    <link rel="stylesheet" href="css/helpers.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/basic.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body onload="onInit()">
-    <div class="justify-main-container">
-
-
+    <div class="body-container">
         <header class="main-header">
-            <img src="img/ui/logo-3x.png" alt="" class="logo">
-            <ul class="navbar pure-list">
-                <li class="nav-gallery"><button class="to-gallery">Gallery</button></li>
-                <li class="nav-about"><button class="to-about">About</button></li>
-            </ul>
+            <div class="header-content main-def-width">
+                <img src="img/ui/logo-3x.png" alt="" class="logo">
+                <ul class="navbar pure-list">
+                    <li class="nav-gallery"><button class="to-gallery">Gallery</button></li>
+                    <li class="nav-about"><button class="to-about">About</button></li>
+                </ul>
+            </div>
         </header>
 
         <main class="main">
-            <section class="edit-section">
+            <section class="edit-section main-def-width">
                 <div class="canvas-container">
                     <canvas class="edit-meme-canvas" width="500" height="500"></canvas>
                 </div>
                 <div class="edit-controlers">
-                    <div class="curr-line">
+                    <!-- <div class="curr-line"> -->
                         <!-- <label for="curr-line">Swith Line:</label> -->
                         <!-- <input type="number" name="curr-lin" id="curr-line" min="1" max="2" value="1" onchange="onSetCurrLine(this.value)"> -->
-                    </div>
+                    <!-- </div> -->
                     
                     <div class="line-text">
-                        <label for="line-text">Line text:</label>
                         <input type="text" name="line-text" id="line-text" onchange="onChangeLineText(this.value)">
                     </div>
                     
-                    <div class="btns increase-decrease">
-                        <button type="button" onclick="onIncreaseLine()">increase</button>
-                        <button type="button" onclick="onDecreaseLine()">decrease</button>
+                    <div class="btns change-lines">
+                        <button class="swith-lines" onclick="onSwithLines()">⇅</button>
                     </div>
-                    <div class="btns up-down">
+                    <div class="btns edit-line-tools">
+                        <button type="button" onclick="onIncreaseLine()">A+</button>
+                        <button type="button" onclick="onDecreaseLine()">A-</button>
                         <button type="button" onclick="onLineUp()  ">▲</button>
                         <button type="button" onclick="onLineDown()">▼</button>
-                        <button class="swith-lines" onclick="onSwithLines()">⇅</button>
                     </div>
 
                 </div>
             </section>
 
             <section class="gallery-section">
-                <div class="grid-gallery grid">
+                <div class="serch-nav"></div>
+                <div class="grid-gallery">
                     <!-- <img class="gallery-img img1" data-id="1" src="img/1.jpg" alt="" onclick="onSelectImg(this)"> -->
                 </div>
+                <div class="user-details"></div>
             </section>
             <!-- 
         <div class="grid">
@@ -72,6 +74,10 @@
         </div> -->
 
         </main>
+        <footer class="footer">
+            <img src="img/ui/logo-3x.png" alt="" class="logo">
+            <div class="copyright">all rights reserved 2019</div>
+        </footer>
 
     </div>
 

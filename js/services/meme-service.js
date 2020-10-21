@@ -2,8 +2,8 @@
 console.log('meme s is ready');
 
 
-
-var gImgs = [{ id: 1, url: 'img/1.jpg' }, { id: 2, url: 'img/2.jpg' }];
+var gImgs = [];
+// var gImgs = [{ id: 1, url: 'img/1.jpg' }, { id: 2, url: 'img/2.jpg' }];
 
 var gMeme = {
     selectedImgId: 1,
@@ -35,6 +35,16 @@ var gMeme = {
 }
 
 var gCurrLine = null;
+
+function createImgs(amunt) {
+    for (let i = 1; i <= amunt; i++) {
+        const img = { id: i, url: `img/${i}.jpg` };
+        gImgs.push(img);
+    }
+}
+
+
+
 
 function setCurrLine(lineIdx) {
     gCurrLine = getLineByIdx(lineIdx)

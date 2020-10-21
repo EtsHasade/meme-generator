@@ -1,70 +1,60 @@
-* {
-    box-sizing: border-box;
-}
-
-/* basic */
-body {
-    background-color: #e3e3e3;
-    margin: 0;
-}
-
-button {
-    cursor: pointer;
-    padding: 0.5em;
-    user-select: none;
-}
-
-input {
-    padding: 0.5em;
-    margin-bottom: 1em  ;
-}
-
-
 
 /* component */
-
 /* header */
+
 .main-header {
     background-color: #ff7f00;
-    height: 66px;
-    
 }
 
-.main-header .logo{
-    height: 24px;
-    
+.logo {
+    height: 22px;
 }
 
 
 
 /* main */
-.grud-gallery {
-    background-color: #bebebe70;   
+
+.main {
+    background-color: #e3e3e3;
+    align-self: stretch;
 }
 
-.grid-gallery .gallery-img{
+
+.serch-nav {
+    background-color: #fff;
+}
+
+.grid-gallery {
+    background-color: #bebebe70;
+}
+
+.grid-gallery>* {
+    width: 100%;
+    margin: 1em;
+}
+
+.grid-gallery .gallery-img {
     cursor: pointer;
-    
 }
 
+.user-details {
+    background-color: #fff;
+}
 
 /* editor section */
 
 .edit-section {
-    display: grid;
-    grid-template: 1fr / 1fr 3fr;
-    gap: 1em;
     border: 1px solid #000;
 }
 
 .canvas-container {
     border: 1px solid #000;
-    display: flex;
-    justify-content: center;
 }
 
 .edit-meme-canvas {
     border: 1px solid #000;
-    margin: 1em;
+}
 
+.footer {
+    background-color: #ff7f00;
 }
