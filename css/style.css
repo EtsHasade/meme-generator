@@ -5,3 +5,30 @@
 body {
     background-color: #aaa;
 }
+
+
+
+
+.grud-gallery {
+    background-color: #02a;
+    display: grid;
+    
+}
+
+.grid-gallery .gallery-img{
+    cursor: pointer;
+}
+
+
+/* editor section */
+
+.canvas-container {
+    border: 1px solid #000;
+    display: flex;
+    justify-content: center;
+}
+
+.edit-meme-canvas {
+    border: 1px solid #000;
+    margin: 1em;
+}

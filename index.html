@@ -1,17 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meme generator</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+
+<body onload="onInit()">
     <header>
         <h1 class="h1-title">Meme Generator</h1>
     </header>
 
+    <main class="main">
+        <section class="gallery-section">
+            <div class="grid-gallery">
+                <!-- <img class="gallery-img img1" data-id="1" src="img/1.jpg" alt="" onclick="onSelectImg(this)"> -->
+            </div>
+        </section>
 
+        <section class="edit-section">
+            <div class="canvas-container">
+                <canvas class="edit-meme-canvas" width="500" height="500"></canvas>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/services/meme-service.js"></script>
+    <script src="js/services/canvas-service.js"></script>
     <script src="js/main.js"></script>
 </body>
+
 </html>
