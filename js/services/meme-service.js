@@ -14,7 +14,20 @@ var gMeme = {
             size: 20,
             font: 'IMPACT',
             align: 'left',
-            color: 'red'
+            srokeColor: '#000000',
+            fillColor: '#ffffff',
+            x: 50,
+            y: 50,
+        },
+        {
+            txt: 'goodBy momo',
+            size: 20,
+            font: 'IMPACT',
+            align: 'left',
+            srokeColor: '#000000',
+            fillColor: '#ffffff',
+            x: 50,
+            y: 200,
         }
     ]
 }
@@ -33,14 +46,15 @@ function getImgById(imgId) {
     return gImgs.find(img => img.id === imgId);
 }
 
-
-function renderGallery() {
-    var strHtml = gImgs.reduce((acc, img) => {
-        acc += `<img class="gallery-img img${img.id}" data-id="${img.id}" src="img/${img.id}.jpg" alt="" onclick="onSelectImg(this)">
-        `
-        return acc;
-    }, '')
-
-    document.querySelector('.grid-gallery').innerHTML = strHtml;
+function getImgsForDisplay() {
+    return gImgs;
 }
 
+
+function getLineById(lineIdx) {
+    return gMeme.lines[lineIdx]
+}
+
+function getMeme() {
+    return gMeme;
+}

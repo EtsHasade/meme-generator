@@ -8,10 +8,21 @@ var gCtx;
 
 function renderBGImageToCanvas(imgId) {
     const elImg = getElImgById(imgId);
-    console.log("renderBGImageToCanvas -> ElImg", elImg)
+    console.log("renderBGImageToCanvas -> elImg", elImg)
     gCanvas.width = elImg.width;
     gCanvas.height = elImg.height;
     gCtx.drawImage(elImg, 0, 0);
+
+}
+
+function drawLines() {
+    const meme = getMeme();
+    console.log("drawLines -> meme", meme)
+    meme.lines.forEach(line => drawLine(line));    
+}
+
+function drawLine(line) {
+    drawText(line.txt, line.x, line.y, line.size, line.font, line.align, line.srokeColor, line.fillColor);
 }
 
 

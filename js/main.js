@@ -9,6 +9,18 @@ function onInit() {
 
 
 
+function renderGallery() {
+    const imgs = getImgsForDisplay()
+    var strHtml = imgs.reduce((acc, img) => {
+        acc += `<img class="gallery-img img${img.id}" data-id="${img.id}" src="img/${img.id}.jpg" alt="" onclick="onSelectImg(this)">
+        `
+        return acc;
+    }, '')
+
+    document.querySelector('.grid-gallery').innerHTML = strHtml;
+}
+
+
 function onSelectImg(eLimg) {
     setCurrImg(eLimg.dataset.id)
     renderBGImageToCanvas(gCurrImgId)
