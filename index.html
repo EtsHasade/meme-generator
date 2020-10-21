@@ -28,16 +28,15 @@
                 </div>
                 <div class="edit-controlers">
                     <div class="curr-line">
-                        <label for="curr-line">Swith Line:</label>
-                        <button class="swith-lines" onclick="onSwithLines()">⇅</button>
+                        <!-- <label for="curr-line">Swith Line:</label> -->
                         <!-- <input type="number" name="curr-lin" id="curr-line" min="1" max="2" value="1" onchange="onSetCurrLine(this.value)"> -->
                     </div>
-
+                    
                     <div class="line-text">
                         <label for="line-text">Line text:</label>
                         <input type="text" name="line-text" id="line-text" onchange="onChangeLineText(this.value)">
                     </div>
-
+                    
                     <div class="btns increase-decrease">
                         <button type="button" onclick="onIncreaseLine()">increase</button>
                         <button type="button" onclick="onDecreaseLine()">decrease</button>
@@ -45,6 +44,7 @@
                     <div class="btns up-down">
                         <button type="button" onclick="onLineUp()  ">▲</button>
                         <button type="button" onclick="onLineDown()">▼</button>
+                        <button class="swith-lines" onclick="onSwithLines()">⇅</button>
                     </div>
 
                 </div>
