@@ -15,9 +15,10 @@ function renderCanvas() {
 function renderBGImageToCanvas(imgId) {
     const elImg = getElImgById(imgId);
     console.log("renderBGImageToCanvas -> elImg", elImg)
-    gCanvas.width = elImg.width;
-    gCanvas.height = elImg.height;
+    gCanvas.width = elImg.naturalWidth;
+    gCanvas.height = elImg.naturalHeight;
     gCtx.drawImage(elImg, 0, 0);
+
 
     
 }
