@@ -3,9 +3,18 @@
 }
 
 body {
-    background-color: #aaa;
+    background-color: rgb(194, 176, 176)
 }
 
+button {
+    cursor: pointer;
+    padding: 0.5em
+}
+
+input {
+    padding: 0.5em;
+    margin-bottom: 1em;
+}
 
 
 

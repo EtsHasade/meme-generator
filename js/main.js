@@ -6,7 +6,7 @@ function onInit() {
     gCanvas = document.querySelector('.edit-meme-canvas');
     gCtx = gCanvas.getContext('2d');
     renderGallery()
-    setCurrLine(0)
+    onSetCurrLine(1)
 
 }
 
@@ -38,6 +38,8 @@ function onChangeLineText(text) {
 
 function onSetCurrLine(numIdx) { 
     setCurrLine(numIdx-1)
+    document.querySelector('#line-text').value = getCurrLine().txt;
+    console.log("onSetCurrLine -> getCurrLine.txt", getCurrLine.txt)
 }
 
 function getElImgById(imgId) {
