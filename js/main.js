@@ -7,7 +7,8 @@ function onInit() {
     gCtx = gCanvas.getContext('2d');
     renderGallery()
     onSetCurrLine(1)
-
+    // setDefaultStyle()
+    
 }
 
 
@@ -27,7 +28,7 @@ function renderGallery() {
 function onSelectImg(eLimg) {
     setCurrImg(eLimg.dataset.id);
     renderCanvas()
-    setDefulteLinesLoc()
+    setDefaulteLinesLoc()
     renderCanvas()
     
 }

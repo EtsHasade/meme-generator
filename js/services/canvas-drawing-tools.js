@@ -2,7 +2,6 @@
 
 var gStrokeCurrColor = '#ffffff';
 var gFillCurrColor = '#5500ff';
-
 var gCurrShape = 'rect';
 
 
@@ -17,6 +16,10 @@ var gBrashResetPos = {
 }
 var gBrashPos = gBrashResetPos;
 
+function setDefaultStyle() {
+    gCtx.srokeStyle = gStrokeCurrColor;
+    gCtx.fillStyle = gFillCurrColor;
+}
 
 function drowBrash(ev) {
     const { offsetX, offsetY } = ev;
@@ -59,6 +62,7 @@ function drowBrash(ev) {
 function markSelectLine(line) {
     gCtx.save()
     gCtx.fillStyle = '#bebebe70';
+    gCtx.strokeStyle = '#ffffff';
     drawRect(line.x-line.txt.length*line.size/2, line.y-line.size, line.txt.length*line.size, line.size+5)
     gCtx.restore()
 }
@@ -102,10 +106,13 @@ function calcDrawText(text, x, y, lenX, lenY) {
 function drawText(text, x, y, size, font, align, strokeColor, fillColor) {
     gCtx.font = `${size}px ${font}`;
     gCtx.textAlign = align;
+
+    gCtx.save()
     gCtx.strokeStyle = strokeColor;
     gCtx.fillStyle = fillColor;
     gCtx.strokeText(text, x, y)
     gCtx.fillText(text, x, y)
+    gCtx.restore()
 }
 
 function clearCanvas() {

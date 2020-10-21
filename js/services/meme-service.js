@@ -88,7 +88,7 @@ function getCurrMeme() {
 }
 
 
-function setDefulteLinesLoc() {
+function setDefaulteLinesLoc() {
     getCurrMeme().lines.forEach((line,idx) => {
         line.x = gCanvas.width / 2;
         if (idx % 2 === 0) line.y = gCanvas.height - gCanvas.height / 10;
