@@ -32,6 +32,16 @@ var gMeme = {
     ]
 }
 
+var gCurrLine = null;
+
+function setCurrLine(lineIdx) {
+    gCurrLine = getLineByIdx(lineIdx)
+}
+
+function getCurrLine() {
+    return gCurrLine;
+}
+
 var gCurrImgId = 1;
 
 function setCurrImg(strImgId) {
@@ -51,7 +61,7 @@ function getImgsForDisplay() {
 }
 
 
-function getLineById(lineIdx) {
+function getLineByIdx(lineIdx) {
     return gMeme.lines[lineIdx]
 }
 

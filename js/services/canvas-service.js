@@ -6,6 +6,12 @@ var gCanvas;
 var gCtx;
 
 
+function renderCanvas() {
+    renderBGImageToCanvas(gCurrImgId);
+    drawLines();
+}
+
+
 function renderBGImageToCanvas(imgId) {
     const elImg = getElImgById(imgId);
     console.log("renderBGImageToCanvas -> elImg", elImg)

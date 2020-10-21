@@ -1,10 +1,13 @@
 'use strict';
 console.log('main js ready');
 
+
 function onInit() {
     gCanvas = document.querySelector('.edit-meme-canvas');
     gCtx = gCanvas.getContext('2d');
     renderGallery()
+    setCurrLine(0)
+
 }
 
 
@@ -22,13 +25,25 @@ function renderGallery() {
 
 
 function onSelectImg(eLimg) {
-    setCurrImg(eLimg.dataset.id)
-    renderBGImageToCanvas(gCurrImgId)
+    setCurrImg(eLimg.dataset.id);
+    renderCanvas()
 }
 
+
+function onChangeLineText(text) { 
+    getCurrLine().txt = text;
+    renderCanvas();
+}
+
+
+function onSetCurrLine(numIdx) { 
+    setCurrLine(numIdx-1)
+}
 
 function getElImgById(imgId) {
     const elImg = document.querySelector(`.gallery-img.img${imgId}`);
     console.log("onGetImgById -> elImg", elImg)
     return elImg
 }
+
+
