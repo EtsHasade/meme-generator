@@ -4,51 +4,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meme generator</title>
+    <title>memegen</title>
+    <link rel="stylesheet" href="css/helpers.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body onload="onInit()">
-    <header>
-        <h1 class="h1-title">Meme Generator</h1>
-    </header>
+    <div class="justify-main-container">
 
-    <main class="main">
-        <section class="edit-section">
-            <div class="canvas-container">
-                <canvas class="edit-meme-canvas" width="500" height="500"></canvas>
-            </div>
-            <div class="edit-controlers">
-                <div class="curr-line">
-                    <label for="curr-line" >Swith Line:</label>
-                    <button class="swith-lines" onclick="onSwithLines()">⇅</button>
-                    <!-- <input type="number" name="curr-lin" id="curr-line" min="1" max="2" value="1" onchange="onSetCurrLine(this.value)"> -->
-                </div>
-                
-                <div class="line-text">
-                    <label for="line-text">Line text:</label>
-                    <input type="text" name="line-text" id="line-text" onchange="onChangeLineText(this.value)">
-                </div>
 
-                <div class="btns increase-decrease">
-                    <button type="button" onclick="onIncreaseLine()">increase</button>
-                    <button type="button" onclick="onDecreaseLine()">decrease</button>
-                </div>
-                <div class="btns up-down">
-                    <button type="button" onclick="onLineUp()  ">▲</button>
-                    <button type="button" onclick="onLineDown()">▼</button>
-                </div>
-                
-            </div>
-        </section>
-        
-        <section class="gallery-section">
-            <div class="grid-gallery">
-                <!-- <img class="gallery-img img1" data-id="1" src="img/1.jpg" alt="" onclick="onSelectImg(this)"> -->
-            </div>
-        </section>
+        <header class="main-header">
+            <img src="img/ui/logo-3x.png" alt="" class="logo">
+            <ul class="navbar pure-list">
+                <li class="nav-gallery"><button class="to-gallery">Gallery</button></li>
+                <li class="nav-about"><button class="to-about">About</button></li>
+            </ul>
+        </header>
 
-    </main>
+        <main class="main">
+            <section class="edit-section">
+                <div class="canvas-container">
+                    <canvas class="edit-meme-canvas" width="500" height="500"></canvas>
+                </div>
+                <div class="edit-controlers">
+                    <div class="curr-line">
+                        <label for="curr-line">Swith Line:</label>
+                        <button class="swith-lines" onclick="onSwithLines()">⇅</button>
+                        <!-- <input type="number" name="curr-lin" id="curr-line" min="1" max="2" value="1" onchange="onSetCurrLine(this.value)"> -->
+                    </div>
+
+                    <div class="line-text">
+                        <label for="line-text">Line text:</label>
+                        <input type="text" name="line-text" id="line-text" onchange="onChangeLineText(this.value)">
+                    </div>
+
+                    <div class="btns increase-decrease">
+                        <button type="button" onclick="onIncreaseLine()">increase</button>
+                        <button type="button" onclick="onDecreaseLine()">decrease</button>
+                    </div>
+                    <div class="btns up-down">
+                        <button type="button" onclick="onLineUp()  ">▲</button>
+                        <button type="button" onclick="onLineDown()">▼</button>
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="gallery-section" hidden>
+                <div class="grid-gallery grid">
+                    <!-- <img class="gallery-img img1" data-id="1" src="img/1.jpg" alt="" onclick="onSelectImg(this)"> -->
+                </div>
+            </section>
+            <!-- 
+        <div class="grid">
+            <img class="gallery-img img1" data-id="1" src="img/1.jpg" alt="" onclick="onSelectImg(this)">
+            <img class="gallery-img img1" data-id="1" src="img/1.jpg" alt="" onclick="onSelectImg(this)">
+            <img class="gallery-img img1" data-id="1" src="img/1.jpg" alt="" onclick="onSelectImg(this)">
+            <img class="gallery-img img1" data-id="1" src="img/1.jpg" alt="" onclick="onSelectImg(this)">
+            <img class="gallery-img img1" data-id="1" src="img/1.jpg" alt="" onclick="onSelectImg(this)">
+            <img class="gallery-img img1" data-id="1" src="img/1.jpg" alt="" onclick="onSelectImg(this)">
+            <img class="gallery-img img1" data-id="1" src="img/1.jpg" alt="" onclick="onSelectImg(this)">
+            <img class="gallery-img img1" data-id="1" src="img/1.jpg" alt="" onclick="onSelectImg(this)">
+            <img class="gallery-img img1" data-id="1" src="img/1.jpg" alt="" onclick="onSelectImg(this)">
+            <img class="gallery-img img1" data-id="1" src="img/1.jpg" alt="" onclick="onSelectImg(this)">
+            <img class="gallery-img img1" data-id="1" src="img/1.jpg" alt="" onclick="onSelectImg(this)">
+            <img class="gallery-img img1" data-id="1" src="img/1.jpg" alt="" onclick="onSelectImg(this)">
+        </div> -->
+
+        </main>
+
+    </div>
 
     <script src="js/services/canvas-drawing-tools.js"></script>
     <script src="js/services/meme-service.js"></script>

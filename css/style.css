@@ -2,8 +2,10 @@
     box-sizing: border-box;
 }
 
+/* basic */
 body {
-    background-color: rgb(194, 176, 176)
+    background-color: #e3e3e3;
+    margin: 0;
 }
 
 button {
@@ -19,10 +21,25 @@ input {
 
 
 
-.grud-gallery {
-    background-color: #bebebe70;
-    display: grid;
+/* component */
+
+/* header */
+.main-header {
+    background-color: #ff7f00;
+    height: 66px;
     
+}
+
+.main-header .logo{
+    height: 24px;
+    
+}
+
+
+
+/* main */
+.grud-gallery {
+    background-color: #bebebe70;   
 }
 
 .grid-gallery .gallery-img{

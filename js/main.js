@@ -16,7 +16,7 @@ function onInit() {
 function renderGallery() {
     const imgs = getImgsForDisplay()
     var strHtml = imgs.reduce((acc, img) => {
-        acc += `<img class="gallery-img img${img.id}" data-id="${img.id}" src="img/${img.id}.jpg" alt="" onclick="onSelectImg(this)">
+        acc += `<img class="gallery-img img${img.id}" data-id="${img.id}" src="${img.url}" alt="" onclick="onSelectImg(this)">
         `
         return acc;
     }, '')
