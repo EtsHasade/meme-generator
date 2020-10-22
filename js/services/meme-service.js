@@ -106,6 +106,24 @@ function setDefaulteLinesLoc() {
     })
 }
 
+
+function addLine() {
+    gMeme.lines.push({
+        txt: 'Your bomb into the face',
+        size: 38,
+        font: 'IMPACT',
+        align: 'center',
+        srokeColor: '#000000',
+        fillColor: '#ffffff',
+        x: gCanvas.width - gCanvas.width/2,
+        y: gCanvas.height - gCanvas.height/2,
+        selected: false
+    })
+    setCurrLine(gMeme.lines.length-1)
+}
+
+
+
 function saveMeme() {
     saveToStorage('gMeme', gMeme)
     saveToStorage('gImgMemeId', gCurrImgId)

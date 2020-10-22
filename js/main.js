@@ -111,6 +111,12 @@ function onDownloadMeme(elDownloadLink) {
     downloadImg(elDownloadLink);
 }
 
+
+function onAddLine() {
+    addLine();
+    renderCanvas();
+}
+
 function toggleSections() {
     document.querySelector('.edit-section').classList.toggle('display-none');
     document.querySelector('.gallery-section').classList.toggle('display-none');
