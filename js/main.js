@@ -117,6 +117,12 @@ function onAddLine() {
     renderCanvas();
 }
 
+
+function onDeleteLine() {
+    deleteActiveLine();
+    renderCanvas()
+}
+
 function toggleSections() {
     document.querySelector('.edit-section').classList.toggle('display-none');
     document.querySelector('.gallery-section').classList.toggle('display-none');

@@ -55,18 +55,21 @@ function setCurrLine(lineIdx) {
 
 }
 
-function getCurrLine() {
-    return gCurrLine;
-}
-
 function selectNextLine() {
-    const memeLines = getCurrMeme().lines;
-    const currLine = getCurrLine()
-    const currLineIdx = memeLines.findIndex(line => line === currLine);
-    const selectLineIdx = (memeLines[currLineIdx + 1]) ? currLineIdx + 1 : 0;
+    const currLineIdx = getCurrLineIdx()
+    const selectLineIdx = (getCurrMeme().lines[currLineIdx + 1]) ? currLineIdx + 1 : 0;
     setCurrLine(selectLineIdx);
 }
 
+function getCurrLineIdx() {
+    const memeLines = getCurrMeme().lines;
+    const currLine = getCurrLine()
+    return memeLines.findIndex(line => line === currLine);
+}
+
+function getCurrLine() {
+    return gCurrLine;
+}
 
 
 
@@ -122,6 +125,13 @@ function addLine() {
     setCurrLine(gMeme.lines.length-1)
 }
 
+function deleteActiveLine() {
+    const deleteLineIdx =  getCurrLineIdx();
+    console.log("deleteActiveLine -> deleteLineIdx", deleteLineIdx)
+    selectNextLine()
+    getCurrMeme().lines.splice(deleteLineIdx,1);
+
+}
 
 
 function saveMeme() {
