@@ -16,16 +16,16 @@
             <div class="header-content main-def-width">
                 <img src="img/ui/logo-3x.png" alt="" class="logo">
                 <ul class="navbar pure-list">
-                    <li class="nav-gallery"><button class="to-gallery">Gallery</button></li>
+                    <li class="nav-gallery activated"><button class="to-gallery" onclick="toggleSections()">Gallery</button></li>
                     <li class="nav-about"><button class="to-about">About</button></li>
                 </ul>
             </div>
         </header>
 
-        <main class="main">
-            <section class="edit-section main-def-width">
+        <main class="main main-def-width">
+            <section class="edit-section  display-none">
                 <div class="canvas-container">
-                    <canvas class="edit-meme-canvas" width="500" height="500"></canvas>
+                    <canvas class="edit-meme-canvas" width="1024" height="1024"></canvas>
                 </div>
                 <div class="edit-controlers">
                     <!-- <div class="curr-line"> -->
@@ -39,12 +39,21 @@
                     
                     <div class="btns change-lines">
                         <button class="swith-lines" onclick="onSwithLines()">⇅</button>
-                    </div>
+                        <button class="add-line" >+</button>
+                        <button class="delete-line" >⨻</button>
+                        <button type="button" onclick="onLineUp()  ">▲</button>
+                        <button type="button" onclick="onLineDown()">▼</button>
+                    </div>                  
                     <div class="btns edit-line-tools">
                         <button type="button" onclick="onIncreaseLine()">A+</button>
                         <button type="button" onclick="onDecreaseLine()">A-</button>
-                        <button type="button" onclick="onLineUp()  ">▲</button>
-                        <button type="button" onclick="onLineDown()">▼</button>
+                        <button type="button" >⫭</button>
+                        <button type="button" >⫩</button>
+                        <button type="button" >⫬</button>
+                        <input type="text" name="font-line" id="fomt-line" value="impact">
+                        <button type="button">⨈</button>
+                        <button type="button">🎨</button>
+                        
                     </div>
 
                 </div>

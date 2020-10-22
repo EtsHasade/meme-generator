@@ -11,7 +11,7 @@ var gMeme = {
     lines: [
         {
             txt: 'I never eat Falafel',
-            size: 20,
+            size: 38,
             font: 'IMPACT',
             align: 'center',
             srokeColor: '#000000',
@@ -22,7 +22,7 @@ var gMeme = {
         },
         {
             txt: 'goodBy momo',
-            size: 20,
+            size: 38,
             font: 'IMPACT',
             align: 'center',
             srokeColor: '#000000',

@@ -39,6 +39,9 @@ button {
     padding: 0.5em;
     user-select: none;
     font-family: inherit;
+    width: 100%;
+    height: 100%;
+    outline: none;
 }
 
 input {
@@ -46,5 +49,6 @@ input {
     margin-bottom: 1em;
     font-family: inherit;
     width: 100%;
+    height: 100%;
 }
 

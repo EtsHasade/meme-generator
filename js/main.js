@@ -31,6 +31,7 @@ function onSelectImg(eLimg) {
     renderCanvas()
     setDefaulteLinesLoc()
     renderCanvas()
+    toggleSections()
     
 }
 
@@ -84,3 +85,8 @@ function getElImgById(imgId) {
 }
 
 
+function toggleSections() {
+    document.querySelector('.edit-section').classList.toggle('display-none');
+    document.querySelector('.gallery-section').classList.toggle('display-none');
+    document.querySelector('.nav-gallery').classList.toggle('activated');
+}
