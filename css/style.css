@@ -22,7 +22,7 @@
 /* editor section */
 
 .edit-section {
-    border: 1px solid #000;
+    /* border: 1px solid #000; */
 }
 
 
@@ -34,11 +34,11 @@
 }
 
 .canvas-container {
-    border: 1px solid #000;
+    /* border: 1px solid #000; */
 }
 
 .edit-meme-canvas {
-    border: 1px solid #000;
+    /* border: 1px solid #000; */
 }
 
 
