@@ -20,9 +20,15 @@
                 <img src="img/ui/logo-3x.png" alt="" class="logo">
 
                 <ul class="navbar pure-list">
-                    <li class="nav-link nav-gallery activated"><button class="to-gallery"
-                            onclick="toggleSections()">Gallery</button></li>
-                    <li class="nav-link nav-about"><button class="to-about">About</button></li>
+                    <li class="nav-link nav-gallery activated">
+                        <button class="btn to-gallery" onclick="toggleSections()">Gallery</button>
+                    </li>
+                    <li class="nav-link  nav-my-memes">
+                        <button class="btn to-about">My Memes</button>
+                    </li>
+                    <li class="nav-link nav-about">
+                        <button class="btn to-about">About</button>
+                    </li>
                 </ul>
             </div>
         </header>
@@ -61,7 +67,7 @@
                     <div class="btns save-download-share">
                         <!-- <input type="file" class="file-input btn" name="image" onchange="onImgInput(event)" /> -->
                         <button>
-                            <a href="#" onclick="downloadImg(this)" download="my image.jpg">Download</a>
+                            <a href="#" onclick="onDownloadMeme(this)" download="my image.jpg">Download</a>
                         </button>
 
                         <form action="" method="POST" enctype="multipart/form-data" onsubmit="uploadImg(this, event)">
@@ -111,6 +117,8 @@
         </footer>
 
     </div>
+
+    <script src="js/services/storage-service.js"></script>
     <script src="js/services/upload-download-share-service.js"></script>
     <script src="js/services/canvas-drawing-tools.js"></script>
     <script src="js/services/meme-service.js"></script>

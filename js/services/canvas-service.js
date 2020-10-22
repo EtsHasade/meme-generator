@@ -6,9 +6,10 @@ var gCanvas;
 var gCtx;
 
 
-function renderCanvas() {
+function renderCanvas(...[isClean]) {
     renderBGImageToCanvasById(gCurrImgId);
-    drawLines();
+    console.log("renderCanvas -> isClean", isClean);
+    drawLines(isClean);
 }
 
 function renderBGImageToCanvasById(imgId) {
@@ -27,14 +28,13 @@ function renderCanvasUserImg(ev) {
     drawLines();
 }
 
-function drawLines() {
+function drawLines(isClean) {
     const meme = getCurrMeme();
-    console.log("drawLines -> meme", meme)
-    meme.lines.forEach(line => drawLine(line));    
+    meme.lines.forEach(line => drawLine(line, isClean));    
 }
 
-function drawLine(line) {
-    if (line.selected) markSelectLine(line);
+function drawLine(line, isClean) {
+    if (!isClean && line.selected) markSelectLine(line);
     drawText(line.txt, line.x, line.y, line.size, line.font, line.align, line.srokeColor, line.fillColor);
     
 }

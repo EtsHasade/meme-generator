@@ -1,7 +1,7 @@
 'use strict';
 
-// download canvas as image
-// us HTML : <a href="#" onclick="downloadImg(this)" download="my image.jpg">Download Image</a>
+// download canvas as image, 
+// using HTML : <a href="#" onclick="downloadImg(this)" download="my image.jpg">Download Image</a>
 function downloadImg(elLink) {
     var imgContent = gCanvas.toDataURL('image/png');
     elLink.href = imgContent

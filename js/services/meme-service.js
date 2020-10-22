@@ -105,3 +105,14 @@ function setDefaulteLinesLoc() {
         else line.y = gCanvas.height / 10;
     })
 }
+
+function saveMeme() {
+    saveToStorage('gMeme', gMeme)
+    saveToStorage('gImgMemeId', gCurrImgId)
+}
+
+function loadMeme() {
+    gMeme = loadFromStorage('gMeme');
+    gCurrImgId = loadFromStorage('gImgMemeId');
+    renderCanvas()
+}

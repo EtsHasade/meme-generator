@@ -105,6 +105,12 @@ function onImgInput(ev) {
     renderCanvasUserImg(ev);
 }
 
+const IS_CLEAN = true;
+function onDownloadMeme(elDownloadLink) {
+    renderCanvas(IS_CLEAN);
+    downloadImg(elDownloadLink);
+}
+
 function toggleSections() {
     document.querySelector('.edit-section').classList.toggle('display-none');
     document.querySelector('.gallery-section').classList.toggle('display-none');

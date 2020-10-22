@@ -11,6 +11,13 @@
 }
 
 
+.navbar .nav-link .btn{
+    font-size: 19px;
+}
+
+.navbar .nav-link:not(:last-child) .btn{
+    border-right: 1px solid #8a8a8a;
+}
 
 /* main */
 
