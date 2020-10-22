@@ -16,8 +16,8 @@ var gMeme = {
             align: 'center',
             srokeColor: '#000000',
             fillColor: '#ffffff',
-            x: 250,
-            y: 50,
+            x: 'default',
+            y: 'default',
             selected: false
         },
         {
@@ -27,8 +27,8 @@ var gMeme = {
             align: 'center',
             srokeColor: '#000000',
             fillColor: '#ffffff',
-            x: 50,
-            y: 200,
+            x: 'default',
+            y: 'default',
             selected: false
         }
     ]
@@ -104,15 +104,17 @@ function getCurrMeme() {
 function setDefaulteLinesLoc() {
     getCurrMeme().lines.forEach((line,idx) => {
         line.x = gCanvas.width / 2;
-        if (idx % 2 === 0) line.y = gCanvas.height - gCanvas.height / 10;
-        else line.y = gCanvas.height / 10;
+        if (line.x === 'default' || line.y === 'default') {
+            if (idx % 2 === 1) line.y = gCanvas.height - gCanvas.height / 10;
+            else line.y = gCanvas.height / 10;
+        }
     })
 }
 
-
+var gNextNewLineId = 2;
 function addLine() {
     gMeme.lines.push({
-        txt: 'Your bomb into the face',
+        txt: 'Your bomb into the face-' + (gNextNewLineId++),
         size: 38,
         font: 'IMPACT',
         align: 'center',
