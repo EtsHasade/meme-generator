@@ -1,13 +1,14 @@
 /* layout */
 
 .body-container {
-    /* height: 100vh; */
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
 
 }
 .main {
     flex-grow: 1;
+
 }
 
 .main-header {
@@ -29,7 +30,7 @@
     padding: 1em 0;
     width: 100%;
     display: grid;
-    grid-template: 80vh / 1fr 1fr;
+    grid-template: 100% / 1fr 1fr;
     align-items: flex-start;
     justify-content: flex-start;
     gap: 1em;
@@ -87,7 +88,6 @@
     min-height: 100%;
     display: grid;
     grid-template: 102px 1fr / 1fr;
-    /* display: none; */
 }
 
 .serch-nav {
@@ -137,6 +137,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    justify-self: flex-end;
 }
 
 /* helpers */

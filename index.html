@@ -16,7 +16,8 @@
             <div class="header-content main-def-width">
                 <img src="img/ui/logo-3x.png" alt="" class="logo">
                 <ul class="navbar pure-list">
-                    <li class="nav-gallery activated"><button class="to-gallery" onclick="toggleSections()">Gallery</button></li>
+                    <li class="nav-gallery activated"><button class="to-gallery"
+                            onclick="toggleSections()">Gallery</button></li>
                     <li class="nav-about"><button class="to-about">About</button></li>
                 </ul>
             </div>
@@ -29,31 +30,31 @@
                 </div>
                 <div class="edit-controlers">
                     <!-- <div class="curr-line"> -->
-                        <!-- <label for="curr-line">Swith Line:</label> -->
-                        <!-- <input type="number" name="curr-lin" id="curr-line" min="1" max="2" value="1" onchange="onSetCurrLine(this.value)"> -->
+                    <!-- <label for="curr-line">Swith Line:</label> -->
+                    <!-- <input type="number" name="curr-lin" id="curr-line" min="1" max="2" value="1" onchange="onSetCurrLine(this.value)"> -->
                     <!-- </div> -->
-                    
+
                     <div class="line-text">
                         <input type="text" name="line-text" id="line-text" onchange="onChangeLineText(this.value)">
                     </div>
-                    
+
                     <div class="btns change-lines">
                         <button class="swith-lines" onclick="onSwithLines()">⇅</button>
-                        <button class="add-line" >+</button>
-                        <button class="delete-line" >⨻</button>
+                        <button class="add-line">+</button>
+                        <button class="delete-line">⨻</button>
                         <button type="button" onclick="onLineUp()  ">▲</button>
                         <button type="button" onclick="onLineDown()">▼</button>
-                    </div>                  
+                    </div>
                     <div class="btns edit-line-tools">
                         <button type="button" onclick="onIncreaseLine()">A+</button>
                         <button type="button" onclick="onDecreaseLine()">A-</button>
-                        <button type="button" >⫭</button>
-                        <button type="button" >⫩</button>
-                        <button type="button" >⫬</button>
+                        <button type="button">⫭</button>
+                        <button type="button">⫩</button>
+                        <button type="button">⫬</button>
                         <input type="text" name="font-line" id="fomt-line" value="impact">
                         <button type="button">⨈</button>
                         <button type="button">🎨</button>
-                        
+
                     </div>
 
                 </div>
@@ -62,33 +63,23 @@
             <section class="gallery-section">
                 <div class="serch-nav"></div>
                 <div class="grid-gallery">
+                    <!-- render images gallery here -->
+                    
                     <!-- <img class="gallery-img img1" data-id="1" src="img/1.jpg" alt="" onclick="onSelectImg(this)"> -->
                 </div>
             </section>
-                <div class="user-details">
-                    <img src="img/10.jpg" alt="" class="user-img">
-                    <div class="details">
-                        <h3 class="user-nike-name">Michael grosman</h3>
-                        <p class="user-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo id alias omnis pariatur consequatur, quidem fugit praesentium voluptas nisi error dolor sint possimus enim expedita, recusandae eius vitae dolorem veniam?</p>
-                    </div>
-                </div>
-            <!-- 
-        <div class="grid">
-            <img class="gallery-img img1" data-id="1" src="img/1.jpg" alt="" onclick="onSelectImg(this)">
-            <img class="gallery-img img1" data-id="1" src="img/1.jpg" alt="" onclick="onSelectImg(this)">
-            <img class="gallery-img img1" data-id="1" src="img/1.jpg" alt="" onclick="onSelectImg(this)">
-            <img class="gallery-img img1" data-id="1" src="img/1.jpg" alt="" onclick="onSelectImg(this)">
-            <img class="gallery-img img1" data-id="1" src="img/1.jpg" alt="" onclick="onSelectImg(this)">
-            <img class="gallery-img img1" data-id="1" src="img/1.jpg" alt="" onclick="onSelectImg(this)">
-            <img class="gallery-img img1" data-id="1" src="img/1.jpg" alt="" onclick="onSelectImg(this)">
-            <img class="gallery-img img1" data-id="1" src="img/1.jpg" alt="" onclick="onSelectImg(this)">
-            <img class="gallery-img img1" data-id="1" src="img/1.jpg" alt="" onclick="onSelectImg(this)">
-            <img class="gallery-img img1" data-id="1" src="img/1.jpg" alt="" onclick="onSelectImg(this)">
-            <img class="gallery-img img1" data-id="1" src="img/1.jpg" alt="" onclick="onSelectImg(this)">
-            <img class="gallery-img img1" data-id="1" src="img/1.jpg" alt="" onclick="onSelectImg(this)">
-        </div> -->
 
+            <section class="user-details">
+                <img src="img/10.jpg" alt="" class="user-img">
+                <div class="details">
+                    <h3 class="user-nike-name">Michael grosman</h3>
+                    <p class="user-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo id alias omnis
+                        pariatur consequatur, quidem fugit praesentium voluptas nisi error dolor sint possimus enim
+                        expedita, recusandae eius vitae dolorem veniam?</p>
+                </div>
+            </section>
         </main>
+
         <footer class="footer">
             <img src="img/ui/logo-3x.png" alt="" class="logo">
             <div class="copyright">all rights reserved 2019</div>

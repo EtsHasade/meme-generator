@@ -88,5 +88,6 @@ function getElImgById(imgId) {
 function toggleSections() {
     document.querySelector('.edit-section').classList.toggle('display-none');
     document.querySelector('.gallery-section').classList.toggle('display-none');
+    document.querySelector('.user-details').classList.toggle('display-none');
     document.querySelector('.nav-gallery').classList.toggle('activated');
 }
