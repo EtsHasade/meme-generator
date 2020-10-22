@@ -45,21 +45,24 @@
 
                     <div class="btns change-lines">
                         <button class="swith-lines" onclick="onSwithLines()">⇅</button>
-                        <button class="add-line" onclick="onAddLine()">+</button>
+                        <button class="add-line" onclick="onAddLine()"      >+</button>
                         <button class="delete-line" onclick="onDeleteLine()">⨻</button>
-                        <button type="button" onclick="onLineUp()  ">▲</button>
-                        <button type="button" onclick="onLineDown()">▼</button>
+                        <button type="button" onclick="onLineUp()"          >▲</button>
+                        <button type="button" onclick="onLineDown()"        >▼</button>
                     </div>
                     <div class="btns edit-line-tools">
-                        <button type="button" onclick="onIncreaseLine()">A+</button>
-                        <button type="button" onclick="onDecreaseLine()">A-</button>
-                        <button type="button" onclick="onAlignText('right')">⫭</button>
+                        <button type="button" onclick="onIncreaseLine()"     >A+</button>
+                        <button type="button" onclick="onDecreaseLine()"     >A-</button>
+                        <button type="button" onclick="onAlignText('right')" >⫭</button>
                         <button type="button" onclick="onAlignText('center')">⫩</button>
-                        <button type="button" onclick="onAlignText('left')">⫬</button>
+                        <button type="button" onclick="onAlignText('left')"  >⫬</button>
+
                         <input type="text" class="font-line" name="font-line" id="fomt-line" value="impact">
+
                         <label for="stroke-color-picker" class="stroke-color-picker-label"></label>
                         <input type="color" class="stroke-color-picker" name="stroke-color-picker"
                             id="stroke-color-picker" onchange="onSetLineStrokeColor(this.value)">
+
                         <label for="color-picker" class="color-picker-label"></label>
                         <input type="color" class="color-picker" name="color-picker" id="color-picker"
                            onchange="onSetLineFillColor(this.value)" onclick="console.log('color!!!')">

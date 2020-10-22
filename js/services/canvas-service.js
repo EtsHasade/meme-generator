@@ -35,7 +35,7 @@ function drawLines(isClean) {
 
 function drawLine(line, isClean) {
     if (!isClean && line.selected) markSelectLine(line);
-    drawText(line.txt, line.x, line.y, line.size, line.font, line.align, line.srokeColor, line.fillColor);
+    drawText(line.txt, line.x, line.y, line.size, line.font, line.align, line.strokeColor, line.fillColor);
     
 }
 

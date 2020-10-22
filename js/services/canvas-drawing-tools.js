@@ -60,11 +60,11 @@ function drowBrash(ev) {
 
 
 function markSelectLine(line) {
-    gCtx.save()
+    // gCtx.save()
     gCtx.fillStyle = '#bebebe70';
     gCtx.strokeStyle = '#ffffff';
     drawRect(line.x-line.txt.length*line.size/2, line.y-line.size, line.txt.length*line.size, line.size+5)
-    gCtx.restore()
+    // gCtx.restore()
 }
 
 function drawLine(x, y, xEnd, yEnd) {

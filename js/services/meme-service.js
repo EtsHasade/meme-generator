@@ -10,22 +10,22 @@ var gMeme = {
     selectedLineIdx: 0,
     lines: [
         {
-            txt: 'I never eat Falafel',
+            txt: 'It is funny?',
             size: 38,
             font: 'IMPACT',
             align: 'center',
-            srokeColor: '#000000',
+            strokeColor: '#000000',
             fillColor: '#ffffff',
             x: 'default',
             y: 'default',
             selected: false
         },
         {
-            txt: 'goodBy momo',
+            txt: 'No!!',
             size: 38,
             font: 'IMPACT',
             align: 'center',
-            srokeColor: '#000000',
+            strokeColor: '#000000',
             fillColor: '#ffffff',
             x: 'default',
             y: 'default',
