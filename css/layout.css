@@ -177,7 +177,7 @@ ul.pure-list>li {
 
 @media (max-width: 645px) {
     .edit-section {
-        grid-template: 60% 1fr / 100%;
+        grid-template: 95vw 1fr / 100%;
     }
     .edit-controlers {
 
