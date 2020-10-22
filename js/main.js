@@ -9,7 +9,7 @@ function onInit() {
     renderGallery()
     onSetCurrLine(1)
     // setDefaultStyle()
-    
+
 }
 
 
@@ -32,7 +32,7 @@ function onSelectImg(eLimg) {
     setDefaulteLinesLoc()
     renderCanvas()
     toggleSections()
-    
+
 }
 
 
@@ -69,11 +69,11 @@ function onDecreaseLine() {
     renderCanvas()
 }
 
-
 function onLineUp() {
     getCurrLine().y -= 5;
     renderCanvas();
 }
+
 function onLineDown() {
     getCurrLine().y += 5;
     renderCanvas();
@@ -84,6 +84,22 @@ function getElImgById(imgId) {
     return elImg
 }
 
+function onAlignText(alignStr) {
+    getCurrLine().align = alignStr;
+    renderCanvas();
+}
+
+function onSetLineStrokeColor(color) {
+    getCurrLine().strokeColor = color;
+    console.log("onSetLineStrokeColor -> getCurrLine().strokeColor", getCurrLine().strokeColor)
+    
+    renderCanvas();
+}
+
+function onSetLineFillColor(color) {
+    getCurrLine().fillColor = color;
+    renderCanvas();
+}
 
 function toggleSections() {
     document.querySelector('.edit-section').classList.toggle('display-none');

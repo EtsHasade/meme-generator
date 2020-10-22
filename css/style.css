@@ -32,19 +32,30 @@
     border: none;
     font-size: 1.25em;
 }
-
+/* 
 .canvas-container {
-    /* border: 1px solid #000; */
+    border: 1px solid #000;
 }
 
 .edit-meme-canvas {
-    /* border: 1px solid #000; */
-}
+    border: 1px solid #000;
+} */
 
 .serch-nav {
     background-color: #fff;
 }
 
+.serch-nav .search-box{
+    border: none;
+    border-bottom: 2px solid #000;
+    cursor: pointer;
+    outline-style: none;
+}
+
+.serch-nav .keywords li{
+    font-family: monsterrat-medium;
+    cursor: pointer;
+}
 
 .grid-gallery .gallery-img {
     cursor: pointer;
@@ -63,5 +74,6 @@
 /* helpers */
 
 .activated {
-    border-bottom: #000000 solid 3px;
+    /* border-bottom: #000000 solid 3px; */
+    box-shadow: inset  0px -3px 0 #000;
 }

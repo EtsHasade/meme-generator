@@ -26,6 +26,20 @@
     align-items: center;
 }
 
+.navbar {
+    height: 100%;
+}
+.navbar .nav-link{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+.navbar .nav-link button{
+    background: none;
+    border: none;
+    
+}
+
 .edit-section {
     padding: 1em 0;
     width: 100%;
@@ -41,11 +55,6 @@
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-}
-
-.edit-meme-canvas {
-    /* width: 30vw;
-    height: 30vw; */
 }
 
 .edit-controlers {
@@ -75,13 +84,45 @@
     grid-template-columns: repeat(5, 3.75em);
 }
 
-/* .edit-controlers .edit-line-tools >*{
-    grid-row: span 2;
-    grid-column:  span 1;
-} */
+.edit-controlers .edit-line-tools button {
+    width: 100%;
+    height: 100%;
+}
 
-.edit-controlers .edit-line-tools input {
+.edit-controlers .edit-line-tools .font-line {
     grid-column: span 3;
+    width: 100%;
+    height: 100%;
+}
+
+.edit-controlers .edit-line-tools .stroke-color-picker {
+    position: absolute;
+    visibility: hidden;
+}
+
+.edit-controlers .edit-line-tools .stroke-color-picker-label {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    background-image: url(../img/ICONS/text_stroke.png);
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.edit-controlers .edit-line-tools .color-picker {
+    position: absolute;
+    visibility: hidden;
+}
+
+.edit-controlers .edit-line-tools .color-picker-label {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    background-image: url(../img/ICONS/paint-board-and-brush.png);
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .gallery-section {
@@ -94,6 +135,19 @@
     position: -webkit-sticky;
     position: sticky;
     top: 66px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.serch-nav .keywords li{
+    margin-left: 1em;
+}
+
+.serch-nav button{
+    background: none;
+    border: none;
+    text-decoration: underline;
 }
 
 .grid-gallery {
@@ -108,7 +162,6 @@
 
 .grid-gallery>* {
     width: 100%;
-    /* margin: 1em; */
 }
 .user-details {
     height: 30em;
@@ -119,7 +172,6 @@
 }
 
 .user-details >* {
-    /* width: 40%; */
     grid-row-start: 2;
     grid-column-start: 3;
 }
@@ -128,7 +180,6 @@
     border-radius: 50%;
     width: 15.625em;
     margin: 2em;
-    /* margin: auto; */
 }
 
 .footer {
@@ -156,7 +207,7 @@ ul.pure-list {
 }
 
 ul.pure-list>li {
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     list-style-type: none;
     display: block;

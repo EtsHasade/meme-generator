@@ -8,17 +8,23 @@
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/basic.css">
     <link rel="stylesheet" href="css/style.css">
+
+    <link rel="icon" 
+      type="image/png" 
+      href="img/ui/icon.svg" />
 </head>
 
 <body onload="onInit()">
     <div class="body-container">
+
         <header class="main-header">
             <div class="header-content main-def-width">
                 <img src="img/ui/logo-3x.png" alt="" class="logo">
+
                 <ul class="navbar pure-list">
-                    <li class="nav-gallery activated"><button class="to-gallery"
+                    <li class="nav-link nav-gallery activated"><button class="to-gallery"
                             onclick="toggleSections()">Gallery</button></li>
-                    <li class="nav-about"><button class="to-about">About</button></li>
+                    <li class="nav-link nav-about"><button class="to-about">About</button></li>
                 </ul>
             </div>
         </header>
@@ -29,11 +35,6 @@
                     <canvas class="edit-meme-canvas" width="1024" height="1024"></canvas>
                 </div>
                 <div class="edit-controlers">
-                    <!-- <div class="curr-line"> -->
-                    <!-- <label for="curr-line">Swith Line:</label> -->
-                    <!-- <input type="number" name="curr-lin" id="curr-line" min="1" max="2" value="1" onchange="onSetCurrLine(this.value)"> -->
-                    <!-- </div> -->
-
                     <div class="line-text">
                         <input type="text" name="line-text" id="line-text" onchange="onChangeLineText(this.value)">
                     </div>
@@ -48,12 +49,14 @@
                     <div class="btns edit-line-tools">
                         <button type="button" onclick="onIncreaseLine()">A+</button>
                         <button type="button" onclick="onDecreaseLine()">A-</button>
-                        <button type="button">⫭</button>
-                        <button type="button">⫩</button>
-                        <button type="button">⫬</button>
-                        <input type="text" name="font-line" id="fomt-line" value="impact">
-                        <button type="button">⨈</button>
-                        <button type="button">🎨</button>
+                        <button type="button" onclick="onAlignText('left')">⫭</button>
+                        <button type="button" onclick="onAlignText('center')">⫩</button>
+                        <button type="button" onclick="onAlignText('right')">⫬</button>
+                        <input type="text" class="font-line" name="font-line" id="fomt-line" value="impact">
+                        <label  for="stroke-color-picker" class="stroke-color-picker-label"></label>
+                        <input type="color" class="stroke-color-picker" name="stroke-color-picker" id="stroke-color-picker" onchange="onSetLineStrokeColor(this.value)">
+                        <label  for="color-picker" class="color-picker-label"></label>
+                        <input type="color" class="color-picker" name="color-picker" id="color-picker" onchange="onSetLineFillColor(this.value)">
 
                     </div>
 
@@ -61,10 +64,20 @@
             </section>
 
             <section class="gallery-section">
-                <div class="serch-nav"></div>
+                <div class="serch-nav">
+                    <input type="search" class="search-box" name="search" id="search" placeholder="Enter search keyword">
+                    <ul class="keywords pure-list">
+                        <li>Happy</li>
+                        <li>Good</li>
+                        <li>Funy</li>
+                        <li>Beaaa...</li>
+                        <li>Sleep</li>
+                    </ul>
+                    <button type="button">more...</button>
+                </div>
                 <div class="grid-gallery">
                     <!-- render images gallery here -->
-                    
+
                     <!-- <img class="gallery-img img1" data-id="1" src="img/1.jpg" alt="" onclick="onSelectImg(this)"> -->
                 </div>
             </section>
