@@ -9,9 +9,7 @@
     <link rel="stylesheet" href="css/basic.css">
     <link rel="stylesheet" href="css/style.css">
 
-    <link rel="icon" 
-      type="image/png" 
-      href="img/ui/icon.svg" />
+    <link rel="icon" type="image/png" href="img/ui/icon.svg" />
 </head>
 
 <body onload="onInit()">
@@ -49,15 +47,28 @@
                     <div class="btns edit-line-tools">
                         <button type="button" onclick="onIncreaseLine()">A+</button>
                         <button type="button" onclick="onDecreaseLine()">A-</button>
-                        <button type="button" onclick="onAlignText('left')">⫭</button>
+                        <button type="button" onclick="onAlignText('right')">⫭</button>
                         <button type="button" onclick="onAlignText('center')">⫩</button>
-                        <button type="button" onclick="onAlignText('right')">⫬</button>
+                        <button type="button" onclick="onAlignText('left')">⫬</button>
                         <input type="text" class="font-line" name="font-line" id="fomt-line" value="impact">
-                        <label  for="stroke-color-picker" class="stroke-color-picker-label"></label>
-                        <input type="color" class="stroke-color-picker" name="stroke-color-picker" id="stroke-color-picker" onchange="onSetLineStrokeColor(this.value)">
-                        <label  for="color-picker" class="color-picker-label"></label>
-                        <input type="color" class="color-picker" name="color-picker" id="color-picker" onchange="onSetLineFillColor(this.value)">
+                        <label for="stroke-color-picker" class="stroke-color-picker-label"></label>
+                        <input type="color" class="stroke-color-picker" name="stroke-color-picker"
+                            id="stroke-color-picker" onchange="onSetLineStrokeColor(this.value)">
+                        <label for="color-picker" class="color-picker-label"></label>
+                        <input type="color" class="color-picker" name="color-picker" id="color-picker"
+                            onchange="onSetLineFillColor(this.value)">
+                    </div>
+                    <div class="btns save-download-share">
+                        <!-- <input type="file" class="file-input btn" name="image" onchange="onImgInput(event)" /> -->
+                        <button>
+                            <a href="#" onclick="downloadImg(this)" download="my image.jpg">Download</a>
+                        </button>
 
+                        <form action="" method="POST" enctype="multipart/form-data" onsubmit="uploadImg(this, event)">
+                            <input name="img" id="imgData" type="hidden" />
+                            <button class="btn" type="submit">Publish</button>
+                            <div class="share-container"></div>
+                        </form>
                     </div>
 
                 </div>
@@ -65,7 +76,8 @@
 
             <section class="gallery-section">
                 <div class="serch-nav">
-                    <input type="search" class="search-box" name="search" id="search" placeholder="Enter search keyword">
+                    <input type="search" class="search-box" name="search" id="search"
+                        placeholder="Enter search keyword">
                     <ul class="keywords pure-list">
                         <li>Happy</li>
                         <li>Good</li>
@@ -99,7 +111,7 @@
         </footer>
 
     </div>
-
+    <script src="js/services/upload-download-share-service.js"></script>
     <script src="js/services/canvas-drawing-tools.js"></script>
     <script src="js/services/meme-service.js"></script>
     <script src="js/services/canvas-service.js"></script>

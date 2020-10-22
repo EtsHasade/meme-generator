@@ -101,6 +101,10 @@ function onSetLineFillColor(color) {
     renderCanvas();
 }
 
+function onImgInput(ev) {
+    renderCanvasUserImg(ev);
+}
+
 function toggleSections() {
     document.querySelector('.edit-section').classList.toggle('display-none');
     document.querySelector('.gallery-section').classList.toggle('display-none');

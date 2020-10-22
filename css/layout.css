@@ -84,7 +84,7 @@
     grid-template-columns: repeat(5, 3.75em);
 }
 
-.edit-controlers .edit-line-tools button {
+.edit-controlers button {
     width: 100%;
     height: 100%;
 }
@@ -123,6 +123,16 @@
     background-size: 70%;
     background-repeat: no-repeat;
     background-position: center;
+}
+
+
+.edit-controlers .save-download-share {
+    grid-row: 7 / span 3;
+    grid-column: 2 / -2;
+    display: grid;
+    gap: 10px;
+    grid-auto-columns:  repeat(5, 3.75em);
+    grid-auto-rows: subgrid;
 }
 
 .gallery-section {
