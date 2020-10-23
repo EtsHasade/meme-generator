@@ -14,6 +14,9 @@
 .navbar .nav-link .btn{
     font-size: 19px;
 }
+.navbar .nav-link:hover {
+    box-shadow: #000 inset 0 -3px 0;
+}
 
 .navbar .nav-link:not(:last-child) .btn{
     border-right: 1px solid #8a8a8a;
@@ -38,6 +41,80 @@
     background-color: #fff;
     border: none;
     font-size: 1.25em;
+}
+
+.edit-controlers .btns>*:hover, .btn-publish:hover{
+    box-shadow: #000 inset 0 -3px 0;
+}
+
+.edit-controlers .btn-publish{
+    background-color: #ff7f00;
+    color: #fff;
+
+}
+
+.edit-controlers .share-container .share-link {
+    font-size: 1rem;
+    color: #fff;
+    font-family: monsterrat-bold;
+    padding: 0.5em;
+    background-color: rgb(83, 122, 207);
+}
+
+.edit-controlers .btns .delete-line {
+    background-image: url(../img/ICONS/trash.png);
+    background-position: center;
+    background-size: 55%;
+    background-repeat: no-repeat;
+}
+
+.edit-controlers .btns .add-line {
+    background-image: url(../img/ICONS/add.png);
+    background-position: center;
+    background-size: 55%;
+    background-repeat: no-repeat;
+}
+
+.edit-controlers .btns .swith-lines {
+    background-image: url(../img/ICONS/up-and-down-opposite-double-arrows-side-by-side.png);
+    background-position: center;
+    background-size: 55%;
+    background-repeat: no-repeat;
+}
+
+.edit-controlers .edit-line-tools .inc-text-line {
+    background-image: url(../img/ICONS/increase\ font\ -\ icon.png);
+    background-position: center;
+    background-size: 55%;
+    background-repeat: no-repeat;
+}
+
+.edit-controlers .edit-line-tools .dec-text-line {
+    background-image: url(../img/ICONS/decrease\ font\ -\ icon.png);
+    background-position: center;
+    background-size: 55%;
+    background-repeat: no-repeat;
+}
+
+.edit-controlers .edit-line-tools .rtl-text-line {
+    background-image: url(../img/ICONS/align-to-left.png);
+    background-position: center;
+    background-size: 55%;
+    background-repeat: no-repeat;
+}
+
+.edit-controlers .edit-line-tools .ltr-text-line {
+    background-image: url(../img/ICONS/align-to-right.png);
+    background-position: center;
+    background-size: 55%;
+    background-repeat: no-repeat;
+}
+
+.edit-controlers .edit-line-tools .center-text-line {
+    background-image: url(../img/ICONS/center-text-alignment.png);
+    background-position: center;
+    background-size: 55%;
+    background-repeat: no-repeat;
 }
 /* 
 .canvas-container {

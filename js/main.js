@@ -32,6 +32,7 @@ function onSelectImg(eLimg) {
     setDefaulteLinesLoc()
     renderCanvas()
     toggleSections()
+    document.documentElement.scrollTop = 0;
 
 }
 
@@ -43,7 +44,6 @@ function onChangeLineText(text) {
 
 
 function onSwithLines() {
-    console.log('press swith');
     selectNextLine();
     renderCanvas()
     document.querySelector('#line-text').value = getCurrLine().txt;

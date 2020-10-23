@@ -57,6 +57,10 @@
     align-items: flex-start;
 }
 
+.edit-meme-canvas {
+    width: 80%;
+}
+
 .edit-controlers {
     display: grid;
     gap: 10px;
@@ -131,13 +135,12 @@
 
 
 .edit-controlers .save-download-share {
-    grid-row: 7 / span 3;
+    grid-row: 7 / span 1;
     grid-column: 2 / -2;
-    display: grid;
+    display: flex;
     gap: 10px;
-    grid-auto-columns:  repeat(5, 3.75em);
-    grid-auto-rows: subgrid;
 }
+
 
 .gallery-section {
     min-height: 100%;
@@ -235,6 +238,9 @@ ul.pure-list>li {
     .main-def-width {
         width: 900px;
     }
+    .edit-meme-canvas {
+        width: 100%;
+    }
 }
 
 @media (max-width: 925px) {
@@ -244,9 +250,6 @@ ul.pure-list>li {
     }
     .edit-controlers {
         font-size: 14px;
-    }
-    .edit-meme-canvas {
-        width: 100%;
     }
 }
 

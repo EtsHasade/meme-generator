@@ -44,18 +44,18 @@
                     </div>
 
                     <div class="btns change-lines">
-                        <button class="swith-lines" onclick="onSwithLines()">⇅</button>
-                        <button class="add-line" onclick="onAddLine()"      >+</button>
-                        <button class="delete-line" onclick="onDeleteLine()">⨻</button>
+                        <button class="swith-lines" onclick="onSwithLines()"></button>
+                        <button class="add-line" onclick="onAddLine()"      ></button>
+                        <button class="delete-line" onclick="onDeleteLine()"></button>
                         <button type="button" onclick="onLineUp()"          >▲</button>
                         <button type="button" onclick="onLineDown()"        >▼</button>
                     </div>
                     <div class="btns edit-line-tools">
-                        <button type="button" onclick="onIncreaseLine()"     >A+</button>
-                        <button type="button" onclick="onDecreaseLine()"     >A-</button>
-                        <button type="button" onclick="onAlignText('right')" >⫭</button>
-                        <button type="button" onclick="onAlignText('center')">⫩</button>
-                        <button type="button" onclick="onAlignText('left')"  >⫬</button>
+                        <button type="button" class="btn inc-text-line" onclick="onIncreaseLine()"     ></button>
+                        <button type="button" class="btn dec-text-line" onclick="onDecreaseLine()"     ></button>
+                        <button type="button" class="btn rtl-text-line" onclick="onAlignText('right')" ></button>
+                        <button type="button" class="btn center-text-line" onclick="onAlignText('center')"></button>
+                        <button type="button" class="btn ltr-text-line" onclick="onAlignText('left')"  ></button>
 
                         <input type="text" class="font-line" name="font-line" id="fomt-line" value="impact">
 
@@ -70,12 +70,12 @@
                     <div class="btns save-download-share">
                         <!-- <input type="file" class="file-input btn" name="image" onchange="onImgInput(event)" /> -->
                         <button>
-                            <a href="#" onclick="onDownloadMeme(this)" download="my image.jpg">Download</a>
+                            <a href="#"  onclick="onDownloadMeme(this)" download="my image.jpg">Download</a>
                         </button>
 
                         <form action="" method="POST" enctype="multipart/form-data" onsubmit="uploadImg(this, event)">
                             <input name="img" id="imgData" type="hidden" />
-                            <button class="btn" type="submit">Publish</button>
+                            <button class="btn btn-publish" type="submit">Publish</button>
                             <div class="share-container"></div>
                         </form>
                     </div>
