@@ -7,7 +7,7 @@ var gCtx;
 
 
 function renderCanvas(...[isClean]) {
-    renderBGImageToCanvasById(gCurrImgId);
+    renderBGImageToCanvasById(gMeme.selectedImgId);
     console.log("renderCanvas -> isClean", isClean);
     drawLines(isClean);
 }

@@ -39,7 +39,10 @@ button {
     padding: 0.5em;
     user-select: none;
     font-family: inherit;
+}
+button:checked, button:focus {
     outline: none;
+    
 }
 
 input {

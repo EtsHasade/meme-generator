@@ -32,7 +32,7 @@
                 </ul>
             </div>
         </header>
-<!-- <img src="img/meme-imgs (various aspect ratios)/003.jpg" alt=""> -->
+        <!-- <img src="img/meme-imgs (various aspect ratios)/003.jpg" alt=""> -->
         <main class="main main-def-width">
             <section class="edit-section  display-none">
                 <div class="canvas-container">
@@ -45,19 +45,19 @@
 
                     <div class="btns change-lines">
                         <button class="swith-lines" onclick="onSwithLines()"></button>
-                        <button class="add-line" onclick="onAddLine()"      ></button>
+                        <button class="add-line" onclick="onAddLine()"></button>
                         <button class="delete-line" onclick="onDeleteLine()"></button>
-                        <button type="button" onclick="onLineUp()"          >▲</button>
-                        <button type="button" onclick="onLineDown()"        >▼</button>
+                        <button type="button" onclick="onLineUp()">▲</button>
+                        <button type="button" onclick="onLineDown()">▼</button>
                     </div>
                     <div class="btns edit-line-tools">
-                        <button type="button" class="btn inc-text-line" onclick="onIncreaseLine()"     ></button>
-                        <button type="button" class="btn dec-text-line" onclick="onDecreaseLine()"     ></button>
-                        <button type="button" class="btn rtl-text-line" onclick="onAlignText('right')" ></button>
+                        <button type="button" class="btn inc-text-line" onclick="onIncreaseLine()"></button>
+                        <button type="button" class="btn dec-text-line" onclick="onDecreaseLine()"></button>
+                        <button type="button" class="btn rtl-text-line" onclick="onAlignText('right')"></button>
                         <button type="button" class="btn center-text-line" onclick="onAlignText('center')"></button>
-                        <button type="button" class="btn ltr-text-line" onclick="onAlignText('left')"  ></button>
+                        <button type="button" class="btn ltr-text-line" onclick="onAlignText('left')"></button>
 
-                        <input type="text" class="font-line" name="font-line" id="fomt-line" value="impact">
+                        <input type="text" class="font-line" name="font-line" id="fomt-line" onblur="onChangFont()" onclick="onChangFont()" value="impact">
 
                         <label for="stroke-color-picker" class="stroke-color-picker-label"></label>
                         <input type="color" class="stroke-color-picker" name="stroke-color-picker"
@@ -65,20 +65,25 @@
 
                         <label for="color-picker" class="color-picker-label"></label>
                         <input type="color" class="color-picker" name="color-picker" id="color-picker"
-                           onchange="onSetLineFillColor(this.value)" onclick="console.log('color!!!')">
+                            onchange="onSetLineFillColor(this.value)" onclick="console.log('color!!!')">
                     </div>
-                    <div class="btns save-download-share">
+                    <div class="share">
                         <!-- <input type="file" class="file-input btn" name="image" onchange="onImgInput(event)" /> -->
                         <button>
-                            <a href="#"  onclick="onDownloadMeme(this)" download="my image.jpg">Download</a>
+                            <a href="#" onclick="onDownloadMeme(this)" download="my image.jpg">Download</a>
                         </button>
 
-                        <form action="" method="POST" enctype="multipart/form-data" onsubmit="uploadImg(this, event)">
+                        <form action="" method="POST" enctype="multipart/form-data" onsubmit="onPublish(this, event)">
                             <input name="img" id="imgData" type="hidden" />
                             <button class="btn btn-publish" type="submit">Publish</button>
                             <div class="share-container"></div>
                         </form>
                     </div>
+
+                        <div class="save-download">
+                            <button onclick="onSaveMeme()" download="my image.jpg">Save</button>
+                            <button onclick="onReloadMeme()" download="my image.jpg">Reload</button>
+                        </div>
 
                 </div>
             </section>
@@ -88,11 +93,11 @@
                     <input type="search" class="search-box" name="search" id="search"
                         placeholder="Enter search keyword">
                     <ul class="keywords pure-list">
-                        <li>Happy</li>
-                        <li>Good</li>
-                        <li>Funy</li>
-                        <li>Beaaa...</li>
-                        <li>Sleep</li>
+                        <li class="keyword" onclick="onSizeUp(this)">Happy</li>
+                        <li class="keyword" onclick="onSizeUp(this)">Good</li>
+                        <li class="keyword" onclick="onSizeUp(this)">Funny</li>
+                        <li class="keyword" onclick="onSizeUp(this)">Beaaa...</li>
+                        <li class="keyword" onclick="onSizeUp(this)">Sleep</li>
                     </ul>
                     <button type="button">more...</button>
                 </div>

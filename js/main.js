@@ -5,7 +5,7 @@ console.log('main js ready');
 function onInit() {
     gCanvas = document.querySelector('.edit-meme-canvas');
     gCtx = gCanvas.getContext('2d');
-    createImgs(20)
+    createImgs(19)
     renderGallery()
     onSetCurrLine(1)
     // setDefaultStyle()
@@ -47,7 +47,7 @@ function onSwithLines() {
     selectNextLine();
     renderCanvas()
     document.querySelector('#line-text').value = getCurrLine().txt;
-    console.log("onSetCurrLine -> getCurrLine.txt", getCurrLine().txt)
+    document.querySelector('.font-line').value = getCurrLine().font;
 }
 
 
@@ -78,6 +78,14 @@ function onLineDown() {
     getCurrLine().y += 5;
     renderCanvas();
 }
+
+
+function onChangFont() {
+    getCurrLine().font = document.querySelector('.font-line').value;
+    renderCanvas();
+}
+
+
 function getElImgById(imgId) {
     const elImg = document.querySelector(`.gallery-img.img${imgId}`);
     console.log("onGetImgById -> elImg", elImg)
@@ -92,7 +100,7 @@ function onAlignText(alignStr) {
 function onSetLineStrokeColor(color) {
     getCurrLine().strokeColor = color;
     console.log("onSetLineStrokeColor -> getCurrLine().strokeColor", getCurrLine().strokeColor)
-    
+
     renderCanvas();
 }
 
@@ -111,10 +119,25 @@ function onDownloadMeme(elDownloadLink) {
     downloadImg(elDownloadLink);
 }
 
+function onPublish(elForm, ev) {
+    uploadImg(elForm, ev);
+}
+
+
+function onSaveMeme() {
+    saveMeme();
+}
+
+
+function onReloadMeme() {
+    loadMeme();
+}
 
 function onAddLine() {
     addLine();
     renderCanvas();
+    document.querySelector('#line-text').value = getCurrLine().txt;
+    console.log("onSetCurrLine -> getCurrLine.txt", getCurrLine().txt)
 }
 
 
@@ -122,6 +145,18 @@ function onDeleteLine() {
     deleteActiveLine();
     renderCanvas()
 }
+
+function onSizeUp(el) {
+    const elTxtSize = el.style.fontSize;
+    console.log("onSizeUp -> elTxtSize", elTxtSize)
+
+    let nextSize = (elTxtSize)? elTxtSize.substring(0, 3) : '100';
+    console.log("onSizeUp -> nextSize", nextSize)
+    nextSize = (+nextSize < 150)?  +nextSize + 5 + '%': nextSize + '%';
+    console.log("onSizeUp -> nextSize", nextSize)
+    el.style.fontSize = nextSize;
+}
+
 
 function toggleSections() {
     document.querySelector('.edit-section').classList.toggle('display-none');

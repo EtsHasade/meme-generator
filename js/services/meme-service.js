@@ -7,7 +7,6 @@ var gImgs = [];
 
 var gMeme = {
     selectedImgId: 1,
-    selectedLineIdx: 0,
     lines: [
         {
             txt: 'It is funny?',
@@ -73,14 +72,12 @@ function getCurrLine() {
 
 
 
-var gCurrImgId = 1;
-
 function setCurrImg(strImgId) {
-    gCurrImgId = +strImgId;
+    gMeme.selectedImgId = +strImgId;
 }
 
 function getCurrImg() {
-    return getImgById(gCurrImgId);
+    return getImgById(gMeme.selectedImgId);
 }
 
 function getImgById(imgId) {
@@ -138,11 +135,9 @@ function deleteActiveLine() {
 
 function saveMeme() {
     saveToStorage('gMeme', gMeme)
-    saveToStorage('gImgMemeId', gCurrImgId)
 }
 
 function loadMeme() {
     gMeme = loadFromStorage('gMeme');
-    gCurrImgId = loadFromStorage('gImgMemeId');
     renderCanvas()
 }

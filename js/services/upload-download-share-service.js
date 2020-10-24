@@ -42,7 +42,7 @@ function uploadImg(elForm, ev) {
         <ul class="pure-list">
             <li>
                 <a class="btn share-link" href="https://www.facebook.com/sharer/sharer.php?u=${uploadedImgUrl}&t=${uploadedImgUrl}" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=${uploadedImgUrl}&t=${uploadedImgUrl}'); return false;">
-                    Share in FaceBook 
+                    facebook
                 </a>
             </li>
          </ul>`
