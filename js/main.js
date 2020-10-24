@@ -5,7 +5,7 @@ console.log('main js ready');
 function onInit() {
     gCanvas = document.querySelector('.edit-meme-canvas');
     gCtx = gCanvas.getContext('2d');
-    createImgs(17)
+    createImgs(20)
     renderGallery()
     onSetCurrLine(1)
     // setDefaultStyle()

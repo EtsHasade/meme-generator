@@ -261,9 +261,6 @@ ul.pure-list>li {
     .edit-controlers {
         font-size: 14px;
     }
-    .edit-meme-canvas {
-        width: 100%
-    }
 }
 
 @media (max-width: 645px) {
