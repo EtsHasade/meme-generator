@@ -133,11 +133,23 @@ function deleteActiveLine() {
 }
 
 
+var gSavedMenes;
 function saveMeme() {
-    saveToStorage('gMeme', gMeme)
+    gMeme.imgDataUrl = getCanvasDataUrl();
+    gSavedMenes = (loadSavedMemes() || []);
+    gSavedMenes.push(gMeme);
+    saveToStorage('savedMemes', gSavedMenes)
 }
 
-function loadMeme() {
-    gMeme = loadFromStorage('gMeme');
-    renderCanvas()
+function loadSavedMemes() {
+    return loadFromStorage('savedMemes');
+}
+
+function loadLastMeme() {
+    gMeme = loadFromStorage('savedMemes')[0];
+}
+
+function setMemefromSaved(memeIdx) {
+    console.log("setMemefromSaved -> meme", memeIdx)
+    gMeme = loadFromStorage('savedMemes')[memeIdx];
 }

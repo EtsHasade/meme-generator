@@ -11,7 +11,19 @@
 }
 
 
+.hamborger-menu {
+    background-image: url(../img/ui/menu.svg);
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+}
+
+.navbar {
+    background-color: #ff7f00;  
+}
+
 .navbar .nav-link .btn{
+
     font-size: 19px;
 }
 .navbar .nav-link:hover {
@@ -147,7 +159,7 @@
     cursor: pointer;
 }
 
-.grid-gallery .gallery-img {
+.gallery-img {
     cursor: pointer;
 }
 
@@ -163,7 +175,6 @@
 
 /* helpers */
 
-.activated {
-    /* border-bottom: #000000 solid 3px; */
+.nav-link.activated {
     box-shadow: inset  0px -3px 0 #000;
 }

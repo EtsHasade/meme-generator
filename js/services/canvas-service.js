@@ -39,3 +39,7 @@ function drawLine(line, isClean) {
     
 }
 
+function getCanvasDataUrl() {
+    return gCanvas.toDataURL('image/png');
+}
+

@@ -18,18 +18,19 @@
         <header class="main-header">
             <div class="header-content main-def-width">
                 <img src="img/ui/logo-3x.png" alt="" class="logo">
-
+                <input type="checkbox" id="toggle-menu" class="toggle-menu" hidden>
                 <ul class="navbar pure-list">
                     <li class="nav-link nav-gallery activated">
-                        <button class="btn to-gallery" onclick="toggleSections()">Gallery</button>
+                        <button class="btn to-gallery" onclick="showSections('gallery-section',this)">Gallery</button>
                     </li>
                     <li class="nav-link  nav-my-memes">
-                        <button class="btn to-about">My Memes</button>
+                        <button class="btn to-my-memes" onclick="showSections('my-memes-section',this);onRenderMyMemes()">My Memes</button>
                     </li>
                     <li class="nav-link nav-about">
                         <button class="btn to-about">About</button>
                     </li>
                 </ul>
+                <label for="toggle-menu" class="hamborger-menu"></label>
             </div>
         </header>
         <!-- <img src="img/meme-imgs (various aspect ratios)/003.jpg" alt=""> -->
@@ -40,7 +41,7 @@
                 </div>
                 <div class="edit-controlers">
                     <div class="line-text">
-                        <input type="text" name="line-text" id="line-text" onchange="onChangeLineText(this.value)">
+                        <input type="text" name="line-text" id="line-text" onkeyup="onChangeLineText(this.value)">
                     </div>
 
                     <div class="btns change-lines">
@@ -82,7 +83,7 @@
 
                         <div class="save-download">
                             <button onclick="onSaveMeme()" download="my image.jpg">Save</button>
-                            <button onclick="onReloadMeme()" download="my image.jpg">Reload</button>
+                            <button onclick="onReloadMeme()" download="my image.jpg">Reload last</button>
                         </div>
 
                 </div>
@@ -108,6 +109,26 @@
                 </div>
             </section>
 
+            <section class="my-memes-section">
+                <div class="serch-nav">
+                    <input type="search" class="search-box" name="search" id="search"
+                        placeholder="Enter search keyword">
+                    <ul class="keywords pure-list">
+                        <li class="keyword" onclick="onSizeUp(this)">Happy</li>
+                        <li class="keyword" onclick="onSizeUp(this)">Good</li>
+                        <li class="keyword" onclick="onSizeUp(this)">Funny</li>
+                        <li class="keyword" onclick="onSizeUp(this)">Beaaa...</li>
+                        <li class="keyword" onclick="onSizeUp(this)">Sleep</li>
+                    </ul>
+                    <button type="button">more...</button>
+                </div>
+                <div class="saved-memes-gallery">
+
+                    <!-- render user memes here -->
+                    <!-- <img class="meme-img" data-memeId="" src="" > -->
+                </div>
+            </section>
+
             <section class="user-details">
                 <img src="img/10.jpg" alt="" class="user-img">
                 <div class="details">
@@ -117,6 +138,8 @@
                         expedita, recusandae eius vitae dolorem veniam?</p>
                 </div>
             </section>
+
+
         </main>
 
         <footer class="footer">

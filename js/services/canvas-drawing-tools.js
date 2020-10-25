@@ -105,7 +105,7 @@ function calcDrawText(text, x, y, lenX, lenY) {
 
 function drawText(text, x, y, size, font, align, strokeColor, fillColor) {
     console.log("drawText -> (text, x, y, size, font, align, strokeColor, fillColor)", text, x, y, size, font, align, strokeColor, fillColor);
-    gCtx.font = `${size}px ${font}`;
+    gCtx.font = `${size}px ${font}, sans-serif`;
     gCtx.textAlign = align;
     gCtx.save()
     gCtx.strokeStyle = strokeColor;

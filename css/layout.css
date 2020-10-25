@@ -26,6 +26,13 @@
     align-items: center;
 }
 
+.hamborger-menu {
+    width: 100px;
+    height: 50px;
+    margin-right: 1em;
+    display: none;
+}
+
 .navbar {
     height: 100%;
 }
@@ -152,7 +159,7 @@
 
 
 
-.gallery-section {
+.gallery-section, .my-memes-section {
     min-height: 100%;
     display: grid;
     grid-template: 102px 1fr / 1fr;
@@ -181,7 +188,7 @@
     text-decoration: underline;
 }
 
-.grid-gallery {
+.grid-gallery, .saved-memes-gallery {
     display: grid;
     grid-gap: 10px;
     grid-template-columns: repeat(auto-fit, 360px);
@@ -191,7 +198,7 @@
     margin: 1em 0;
 }
 
-.grid-gallery>* {
+.grid-gallery>* , .saved-memes-gallery>*{
     width: 100%;
 }
 .user-details {
@@ -323,4 +330,36 @@ ul.pure-list>li {
         width: 100%;
         height: fit-content;
     }
+    
+    .hamborger-menu {
+        display: block;
+    }
+
+    .navbar {
+        overflow: hidden;
+        flex-direction: column;
+        height: 0px;
+        width: 100%;
+        position: relative;
+        transition: 0.3s;
+        top: 0%;
+    }
+    
+    .navbar .nav-link{
+        width: 100%;
+    }
+    
+    
+    .navbar .nav-link .btn{
+        width: 100%;
+        text-align: center;
+        border-color: #ff7f00 ;
+    }
+    
+    .toggle-menu:checked ~ *.navbar {
+        top: 90%;
+        height: 10em;
+    }
 }
+
+
