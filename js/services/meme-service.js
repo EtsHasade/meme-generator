@@ -5,7 +5,7 @@ console.log('meme s is ready');
 var gImgs = [];
 // var gImgs = [{ id: 1, url: 'img/1.jpg' }, { id: 2, url: 'img/2.jpg' }];
 
-var gMeme = {
+var gDefaultMeme = {
     selectedImgId: 1,
     lines: [
         {
@@ -32,6 +32,12 @@ var gMeme = {
         }
     ]
 }
+
+var gMeme;
+function setDefaultMeme() {
+    gMeme = JSON.parse(JSON.stringify(gDefaultMeme));
+}
+
 
 var gCurrLine = null;
 

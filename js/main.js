@@ -7,9 +7,8 @@ function onInit() {
     gCtx = gCanvas.getContext('2d');
     createImgs(19)
     renderGallery()
+    setDefaultMeme()
     onSetCurrLine(1)
-    // setDefaultStyle()
-
 }
 
 
@@ -29,7 +28,9 @@ function renderGallery() {
 function onSelectImg(eLimg) {
     setCurrImg(eLimg.dataset.id);
     renderCanvas()
+    setDefaultMeme()
     setDefaulteLinesLoc()
+    onSetCurrLine(1)
     renderCanvas()
     showEditSections()
     document.documentElement.scrollTop = 0;
@@ -202,9 +203,7 @@ function onRenderMyMemes() {
         <img class="meme-img gallery-img" data-id="${meme.selectedImgId}" src="${meme.imgDataUrl}" onclick=" setMemefromSaved(${idx}) ; onSelectImg(this)">
         `)
     });
-    
-    console.log("onRenderMyMemes -> memesImgs", memesImgs)
-    document.querySelector('.saved-memes-gallery').innerHTML = memesImgs.join('');
-
-    showMyMemesSections()
+      
+    document.querySelector('.saved-memes-gallery').innerHTML = (memesImgs.length)? memesImgs.join('') : '<h2>there is no saved memes</h2>';
+    // showMyMemesSections()
 }
